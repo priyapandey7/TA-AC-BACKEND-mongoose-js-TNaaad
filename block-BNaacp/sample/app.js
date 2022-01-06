@@ -38,7 +38,7 @@ app.get('/user',(req,res) =>{
 app.get('/user/:id',(req,res) => {
     //grap the id
     var id = req.params.id;
-  user.findById(id, (err, user) =>{
+    user.findById(id, (err, user) =>{
       console.log(err);
       res.json(user);
   })
@@ -48,7 +48,7 @@ app.get('/user/:id',(req,res) => {
 app.put('/user/:id',(req,res) => {
     //grap the id
     var id = req.params.id;
-  user.findByIdAndUpdate(id, req.body,{new:true} ,(err, updateUser) =>{
+     user.findByIdAndUpdate(id, req.body,{new:true} ,(err, updateUser) =>{
       console.log(err);
       res.json(updateUser);
   })
@@ -57,7 +57,7 @@ app.put('/user/:id',(req,res) => {
 app.detete('/user/:id',(req,res) => {
     //grap the id
     var id = req.params.id;
-  user.findByIdAndDelete(id, req.body,{new:true} ,(err, deleteUser) =>{
+    user.findByIdAndDelete(id, req.body,{new:true} ,(err, deleteUser) =>{
       console.log(err);
       res.send(`${deleteUser.name} was deleted`);
   })
