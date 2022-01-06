@@ -14,7 +14,7 @@ var app = express();
 //middleware
 app.use(express.json())
 
-app.get('/',(req,res) => {
+app.get('/',( req,res ) => {
     res.send('Welcome');
 })
 
