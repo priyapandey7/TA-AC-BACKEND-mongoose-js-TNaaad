@@ -54,10 +54,10 @@ app.put('/user/:id',(req,res) => {
   })
 })
 
-app.detete('/user/:id',(req,res) => {
+app.detete('/users/:id',(req,res) => {
     //grap the id
     var id = req.params.id;
-    user.findByIdAndDelete(id, req.body,{new:true} ,(err, deleteUser) =>{
+    user.findByIdAndDelete(id, req.body,{ new :true } ,(err, deleteUser) =>{
       console.log(err);
       res.send(`${deleteUser.name} was deleted`);
   })
