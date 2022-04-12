@@ -1,9 +1,11 @@
 var express = require('express');
-const { send } = require('express/lib/response');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/sample', (err) => {
-    console.log(err ? err : 'connected true');
+//connect to databse
+mongoose.connect("mongodb://localhost/connect-mongoose",
+{ useNewUrlparser: true , useUnifiedTopology: true },
+(err) => {
+    console.log('Databse connected');
 })
 
 var app = express();
