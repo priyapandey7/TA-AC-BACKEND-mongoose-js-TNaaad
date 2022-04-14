@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-var schema = mongoose.schema
+var Schema = mongoose.Schema
 
 var articleSchema = new mongoose.Schema({
     title : String,
@@ -9,3 +9,5 @@ var articleSchema = new mongoose.Schema({
     createdAt :{ type : Date ,default: new Date()},
     likes : { type: Number , default :0}
 })
+
+module.exports = mongoose.model("Article" ,articleSchema)

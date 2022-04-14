@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-var schema = mongoose.schema
+var Schema = mongoose.Schema
 
 var userSchema = new mongoose.Schema({
     name : String,
@@ -8,5 +8,8 @@ var userSchema = new mongoose.Schema({
     age : { type: Number , default :0},
     password: {type :String, minlength: 5},
     createdAt :{ type : Date ,default: new Date()},
+    likes :{type: Number , default: 0},
     favourites:[String]
-},{timestamps:true});
+},{timestamps: true});
+
+module.exports = mongoose.model("User" ,userSchema)

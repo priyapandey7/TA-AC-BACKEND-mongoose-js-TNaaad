@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-var schema = mongoose.schema
+var Schema = mongoose.Schema
 
 var addressSchema = new mongoose.Schema({
     village : String,
