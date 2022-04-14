@@ -1,22 +1,15 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var schema = mongoose.schema;
-
-var userSchema = new schema({
+var userSchema = new Schema({
     Name:  String, 
     age: {type: Number , default :0 },
     Email:   {type : String , lowercase :true},
-    favorites:[String],
-    marks:[Number],
-    password: { type:String, minimum:5, maximim:15 },
-    created_at : { type: Date, required: true, default: Date.now } 
-}, {timestamp:true});
+    favorites: [String], //array of string
+    marks:  [Number], //array of number
+    password: {type: String, minlength :5 ,maxlength : 15},
+    createAt: { type:Date , default: new Date()}
+});
 
-var addressSchema  = new schema({
- village: String,
- city : String,
- state : String,
- pin : Number,
- user : schema.Types.objectId
 
-})
+
