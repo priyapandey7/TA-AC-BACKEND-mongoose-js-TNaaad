@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 // connect to mongoDb 
 mongoose.connect("mongodb://localhost/sample",
 {
-useNewUrlParser: true, useUnifienedTopology: true} ,
+useNewUrlParser: true, useUnifiedTopology: true} ,
 (err) => {
     console.log(err ? err : "connected true");
 });
