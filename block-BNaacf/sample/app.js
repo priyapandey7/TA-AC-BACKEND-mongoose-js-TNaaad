@@ -1,5 +1,4 @@
 var express = require('express');
-const { send } = require('express/lib/response');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/sample', (err) => {
