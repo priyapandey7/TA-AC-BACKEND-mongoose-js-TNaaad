@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var schema = mongoose.schema;
 
-var userSchema = new schema({
+var userSchema = new Schema({
     Name:  String, 
     age: {type: Number , default :0 },
     Email:   {type : String , lowercase :true},
