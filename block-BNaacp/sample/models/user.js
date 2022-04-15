@@ -4,10 +4,10 @@ var Schema = mongoose.Schema;
 
 var userSchema  = new Schema({
     name:String,
-    email:String,
+    emails : {type: String, lowercase: true},
     sports:String
 },{ timestamps : true })
 
-var User = mongoose.model('User',userSchema);
+// var User = mongoose.model('User',userSchema);
 
-module.exports = User;
+module.exports = mongoose.model("User" ,userSchema)
